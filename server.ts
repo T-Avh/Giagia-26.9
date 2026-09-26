@@ -47,6 +47,7 @@ async function startServer() {
   } else {
     // Production Mode: Phục vụ static build từ thư mục dist
     const distPath = path.resolve(__dirname, 'dist');
+    app.use('/Giagia-26.9', express.static(distPath));
     app.use(express.static(distPath));
 
     // Điều hướng mọi request về dist/index.html (SPA Fallback)
