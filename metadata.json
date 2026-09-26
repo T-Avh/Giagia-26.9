@@ -1,0 +1,6 @@
+{
+  "name": "Gia Gia TikTok Analytics & Cadence Intelligence",
+  "description": "Hệ thống phân tích chuyên sâu dữ liệu video, tần suất đăng tải, hiệu suất tương tác và chiến lược GWP kênh TikTok @giagia.vietnam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
