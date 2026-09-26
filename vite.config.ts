@@ -2,11 +2,12 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import { defineConfig } from 'vite';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/Giagia-26.9/',
-  plugins: [react(), tailwindcss()],
+  base: './',
+  plugins: [react(), tailwindcss(), viteSingleFile()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, '.'),
@@ -14,7 +15,9 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    assetsDir: 'assets',
+    assetsInlineLimit: 100000000,
+    chunkSizeWarningLimit: 100000000,
+    cssCodeSplit: false,
     sourcemap: false,
     emptyOutDir: true,
   },

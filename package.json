@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build",
+    "build": "vite build && cp dist/index.html giagia-analytics-standalone.html",
     "start": "tsx server.ts",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -36,6 +36,7 @@
     "gh-pages": "^6.3.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vite-plugin-singlefile": "^2.3.3"
   }
 }
